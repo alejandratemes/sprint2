@@ -1,0 +1,55 @@
+/*mixins*/
+@mixin position ($position, $top, $left, $width, $height) {
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin mq ($medida : 767px) {
+    @media screen and (max-width : $medida) {@content;}
+}
+/*mixins*/
+
+.tab-1 {
+    @include position(absolute, 11em, auto, auto, auto);
+    @include mq () {@include position (absolute, 12em, 5em, auto, 23em);}
+    @include mq (576px) {left:0em;};
+}
+
+#caja1 {
+    @include position (relative, 8em, 10em, 32em, 20em);
+    border-bottom-left-radius: 45%;
+    @include mq() {@include position(relative, 5em, 4em, 28em, 17em);};
+    @include mq(576px) {top:6em;};
+}
+
+.tab-2,.tab-3,.tab-4{
+    @include position (absolute,60em, auto, auto, auto);
+    @include mq(940px) {@include position(absolute, 85em, 15em, auto, 18em);};
+    @include mq() {@include position (absolute, 88em, 15em, auto, 18em);};
+    @include mq(576px) {@include position(absolute, 89em, 0, auto, 18em);};
+}
+
+.tab-2 {
+    @include mq(576px) {left:6em;};
+}
+
+.tab-3,.tab-4{
+    left:10em;
+    @include mq() {left: 18em;};
+    @include mq(576px) {left:12em;};
+}
+
+#caja2 {
+    @include position (static, 0, 0, 35em, 20em);
+    border-bottom-right-radius: 45%;
+    @include mq() {height:17em; width:30em;};
+}
+
+#caja3, #caja4 {
+    @include position (static, 0, 0, 35em, 20em);
+    border-bottom-right-radius: 45%;
+    @include mq() {height:17em;width:25em;};
+}

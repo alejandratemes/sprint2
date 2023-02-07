@@ -1,0 +1,21 @@
+$h1-font-size: 3em;
+$font-family-sans-serif: 'Rubik', sans-serif;
+$nav-link-color: gray;
+$primary: #5265E1;
+$danger: #FA5959;
+$dark: #242946;
+$nav-tabs-link-active-border-color: $danger;
+$accordion-icon-color: $primary;
+$accordion-button-active-bg: white;
+$accordion-button-active-color: black;
+$accordion-icon-active-color: $danger;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1.5,
+  4: $spacer * 3,
+  5: $spacer * 6,
+);

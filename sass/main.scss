@@ -1,0 +1,67 @@
+@import "./variables";
+@import './resets';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './cajas';
+@import './botones';
+
+.navbar-toggler {
+    z-index:1000;
+    &:hover {color:white;};
+}
+
+#navbarToggleExternalContent {
+    @include position(fixed, 0, auto, 100%, auto);
+    z-index: 100;
+    opacity: 90%;
+}
+
+#toggler-cont {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.8em;
+    .nav-link{border-top: 0.2px solid #ffffff8c; border-bottom: 0.2px solid #ffffff8c};
+    .btn {font-size: 1em;};
+}
+
+#logo-burger, #menu:hover{
+    filter: invert(100%) sepia(0%) saturate(6736%) hue-rotate(216deg) brightness(200%) contrast(100%);
+}
+
+.social {
+    height:1.5em;
+}
+
+.FEAT .nav-link.active, .FEAT .nav-link {
+    border-top: white;
+    border-right: white;
+    border-left: white;
+    border-radius: none;
+    &:hover {
+        border-bottom: 5px solid $danger;
+    }
+}
+
+#card2 {
+    @include position (relative, 2em, auto, auto, auto);
+}
+
+#card3 {
+    @include position (relative, 4em, auto, auto, auto);
+}
+
+.accordion-button:hover {
+    color: $danger;
+}
+
+.SUB, .BURGER{
+    letter-spacing: 0.5em;
+}
+
+.accordion-collapse {
+    line-height: 2em;
+    color: gray;
+}
+
+.redes:hover,.nav-link:hover {
+    filter: invert(57%) sepia(30%) saturate(5357%) hue-rotate(327deg) brightness(103%) contrast(95%);
+}

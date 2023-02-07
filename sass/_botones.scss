@@ -1,0 +1,17 @@
+@mixin boton($color, $bg, $border) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border;
+}
+
+.btn-danger {
+    color:white;
+    &:hover{@include boton($danger, white, $danger,);}
+}
+
+.btn-primary {
+    color:white;
+    &:hover{@include boton($primary, white, $primary,);}
+}
+
+.btn-light { &:hover{@include boton(black, white, black,);} }
